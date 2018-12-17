@@ -32,16 +32,15 @@ public class MainActivity extends AppCompatActivity {
 
 
         recyclerView = (RecyclerView) findViewById(R.id.articles);
-        // w celach optymalizacji
+     
         recyclerView.setHasFixedSize(true);
 
-        // ustawiamy LayoutManagera
+        
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        // ustawiamy animatora, który odpowiada za animację dodania/usunięcia elementów listy
+        
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
-        // tworzymy źródło danych - tablicę z artykułami
         ArrayList<Article> articles = new ArrayList<>();
         allText = new ArrayList<>();
 
@@ -64,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        // tworzymy adapter oraz łączymy go z RecyclerView
+        
         recyclerView.setAdapter(new MyAdapter(articles, recyclerView, this));
 
 
